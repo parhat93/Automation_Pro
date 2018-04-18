@@ -14,7 +14,8 @@ public class Homepage {
 	}
 	
 	
-	
+	@FindBy(id="ja")
+	public WebElement gmail;
 	
 	
 	
