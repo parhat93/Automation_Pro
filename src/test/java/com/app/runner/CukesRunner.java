@@ -5,7 +5,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 		
-		plugin= {"pretty",
+		plugin= {"pretty",                                           // how u report looks like, it is going to show your report
 				"html:target/cucumber-report",
 				"json:target/cucumber.json"
 		},
