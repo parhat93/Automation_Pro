@@ -26,7 +26,6 @@ public class homepage_StepDefinitions {
 		homepage.gmail.click();
 		homepage.createAnAccount.click();	
 		BrowserUtils.switchToWindow("Create your Google Account");
-		assertTrue(Driver.getDriver().getTitle().equals("Google"));
 	}
 	@Then("^I filed Up firstname \"([^\"]*)\" and lastName \"([^\"]*)\"$")
 	public void i_filed_Up_firstname_and_lastName(String FirstName,String LastName) {
