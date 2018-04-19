@@ -14,9 +14,12 @@ public class Homepage {
 	}
 	
 	
-	@FindBy(id="ja")
+	@FindBy(linkText="Gmail")
 	public WebElement gmail;
 	
+	
+	@FindBy(linkText="CREATE AN ACCOUNT")
+	public WebElement createAnAccount;
 	
 	
 }

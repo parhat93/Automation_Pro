@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 
+import com.app.pages.Homepage;
+import com.app.utilities.BrowserUtils;
 import com.app.utilities.ConfigurationReader;
 import com.app.utilities.Driver;
 
@@ -17,9 +19,15 @@ import cucumber.api.java.en.When;
 
 public class homepage_StepDefinitions {
 
+	Homepage homepage = new Homepage();
+	
+	
 	@When("^I open homepage of Google and open the creating gmail page$")
 	public void i_open_homepage_of_Google_and_open_the_creating_gmail_page() {
 		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+		homepage.gmail.click();
+		homepage.createAnAccount.click();	
+		BrowserUtils.switchToWindow("Create your Google Account");
 	}
 
 	@Then("^I filed Up firstname \"([^\"]*)\" and lastName \"([^\"]*)\"$")
